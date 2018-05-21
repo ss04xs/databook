@@ -30,15 +30,19 @@ def databook_list(request):
                 ('comment', comment.comment),
             ])
             comments.append(comment_dict)
-
         databook_dict = OrderedDict([
             ('id', databook.id),
             ('name', databook.name),
             ('club', databook.club),
             ('num', databook.num),
+            ('position', databook.position),
+            ('height', databook.height),
+            ('weight', databook.weight),
+            ('foot_handed', databook.foot_handed),
+            ('previous_team', databook.previous_team),
             ('comments', comments)
         ])
         databooks.append(databook_dict)
 
-    data = OrderedDict([ ('databooks', databooks) ])
+    data = OrderedDict([ ('player', databooks) ])
     return render_json_response(request, data)
