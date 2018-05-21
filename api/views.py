@@ -44,5 +44,5 @@ def databook_list(request):
         ])
         databooks.append(databook_dict)
 
-    data = OrderedDict([ ('player', databooks) ])
+    data = OrderedDict([ ('databooks', databooks) ])
     return render_json_response(request, data)
