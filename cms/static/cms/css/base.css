@@ -6,3 +6,8 @@ table {
 	width: 100%;
 	table-layout: fixed;
 }
+
+td a .btn-sm {
+	font-size: 11px;
+    padding: 2px 4px;
+}
