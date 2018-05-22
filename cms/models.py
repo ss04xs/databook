@@ -11,7 +11,7 @@ class DataBook(models.Model):
     weight = models.IntegerField('体重', blank=True, default=0)
     foot_handed = models.CharField('利き足', max_length=255, blank=True)
     previous_team = models.CharField('前所属クラブ', max_length=255, blank=True)
-    image_url = models.CharField('プロフィール画像', blank=True)
+    image_url = models.CharField('プロフィール画像', max_length=255, blank=True)
 
     def __str__(self):
         return self.name
