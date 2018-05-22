@@ -1,3 +1,8 @@
 html {
     overflow-x: hidden;
 }
+
+table {
+	width: 100%;
+	table-layout: fixed;
+}
