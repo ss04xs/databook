@@ -40,6 +40,7 @@ def databook_list(request):
             ('weight', databook.weight),
             ('foot_handed', databook.foot_handed),
             ('previous_team', databook.previous_team),
+            ('image_url', databook.image_url),
             ('comments', comments)
         ])
         databooks.append(databook_dict)

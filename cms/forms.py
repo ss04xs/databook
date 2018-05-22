@@ -6,7 +6,7 @@ class DataBookForm(ModelForm):
     """選手データのフォーム"""
     class Meta:
         model = DataBook
-        fields = ('name', 'club', 'num', 'position', 'height', 'weight', 'foot_handed', 'previous_team')
+        fields = ('name', 'club', 'num', 'position', 'height', 'weight', 'foot_handed', 'previous_team', 'image_url')
 
 class CommentForm(ModelForm):
     """感想のフォーム"""
