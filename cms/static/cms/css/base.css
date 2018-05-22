@@ -7,7 +7,7 @@ table {
 	table-layout: fixed;
 }
 
-td a .btn-sm {
+td .btn-sm {
 	font-size: 11px;
     padding: 2px 4px;
 }
