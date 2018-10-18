@@ -24,3 +24,11 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.comment
+
+class Chant(models.Model):
+    """Chant"""
+    title = models.CharField('タイトル', max_length=255, blank=True)
+    chant = models.TextField('歌詞', blank=True)
+
+    def __str__(self):
+        return self.title

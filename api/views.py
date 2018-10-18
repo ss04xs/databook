@@ -1,7 +1,7 @@
 import json
 from collections import OrderedDict
 from django.http import HttpResponse
-from cms.models import DataBook
+from cms.models import DataBook, Chant
 
 
 def render_json_response(request, data, status=None):
@@ -46,4 +46,18 @@ def databook_list(request):
         databooks.append(databook_dict)
 
     data = OrderedDict([ ('databooks', databooks) ])
+    return render_json_response(request, data)
+
+def chant_list(request):
+    """選手データと感想のJSONを返す"""
+    chants = []
+    for chant in Chant.objects.all().order_by('id'):
+
+        chant_dict = OrderedDict([
+            ('タイトル', chant.title),
+            ('歌詞', chant.chant)
+        ])
+        chants.append(chant_dict)
+
+    data = OrderedDict([ ('chants', chants) ])
     return render_json_response(request, data)
